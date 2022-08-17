@@ -17,5 +17,5 @@ konlpy
 jvm
 PyPI
 streamlit-bokeh-events
-
+haversine
 #####
