@@ -99,7 +99,7 @@ st.write(dis)
 
 df_ = pd.read_csv('data/df__')
 count = 0
-for x, y in zip(df['위도'], df['경도']):
+for x, y in zip(df_['위도'], df_['경도']):
  if distance(result.get("GET_LOCATION")['lat'], result.get("GET_LOCATION")['lon'],x ,y)<400000:
      count = count + 1
 
