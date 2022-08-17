@@ -13,7 +13,7 @@ import streamlit as st
 from bokeh.models.widgets import Button
 from bokeh.models import CustomJS
 from streamlit_bokeh_events import streamlit_bokeh_events
-
+from haversine import haversine
 
 
 
@@ -64,12 +64,13 @@ if btn_clicked:
     
 blah()
     
+def distance(origin_lat, origin_lng, destination_lat, destination_lng):
+    origin = (origin_lat, origin_lng)
+    destination = (destination_lat,destination_lng)
+    return haversine(origin, destination, unit = 'm')    
     
     
     
-    
-    
-
 
 loc_button = Button(label="Get Location")
 loc_button.js_on_event("button_click", CustomJS(code="""
@@ -90,3 +91,6 @@ result = streamlit_bokeh_events(
 if result:
     if "GET_LOCATION" in result:
         st.write(result.get("GET_LOCATION"))
+        
+        
+distance(loc.coords.latitude, loc.coords.longitude, 37.563953,127.007410)    
