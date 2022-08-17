@@ -98,7 +98,7 @@ st.write(dis)
 
 
 count = 0
-for i in df.iloc[:10]:
+for i in df["위도"].iloc[:10]:
  if distance(result.get("GET_LOCATION")['lat'], result.get("GET_LOCATION")['lon'], df["위도"][i], df["경도"][i])<400000:
      count = count + 1
 
