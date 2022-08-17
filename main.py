@@ -92,5 +92,5 @@ if result:
     if "GET_LOCATION" in result:
         st.write(result.get("GET_LOCATION"))
         
-print(loc.coords.latitude)    
-distance(loc.coords.latitude, loc.coords.longitude, 37.563953,127.007410)    
+
+distance(result.get("GET_LOCATION")['lat'], result.get("GET_LOCATION")['lon'], 37.563953,127.007410)    
