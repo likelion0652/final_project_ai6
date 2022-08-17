@@ -99,6 +99,7 @@ st.write(dis)
 
 df_ = pd.read_csv('data/df__')
 count = 0
+print(df_["위도"].iloc[1])
 for i in df_["위도"].iloc[:10]:
  if distance(result.get("GET_LOCATION")['lat'], result.get("GET_LOCATION")['lon'], df_["위도"][i], df_["경도"][i])<400000:
      count = count + 1
