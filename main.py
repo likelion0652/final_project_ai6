@@ -93,4 +93,5 @@ if result:
         st.write(result.get("GET_LOCATION"))
         
 
-distance(result.get("GET_LOCATION")['lat'], result.get("GET_LOCATION")['lon'], 37.563953,127.007410)    
+dis=distance(result.get("GET_LOCATION")['lat'], result.get("GET_LOCATION")['lon'], 37.563953,127.007410)    
+st.write(dis)
