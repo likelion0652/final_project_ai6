@@ -103,4 +103,4 @@ for x, y in zip(df_['위도'], df_['경도']):
     if distance(result.get("GET_LOCATION")['lat'], result.get("GET_LOCATION")['lon'],x ,y)<300:
         count = count + 1
       
-st.write(count)
+st.write(count, df_["상호지점명"])
