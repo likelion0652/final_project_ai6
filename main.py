@@ -96,10 +96,3 @@ if result:
 dis=distance(result.get("GET_LOCATION")['lat'], result.get("GET_LOCATION")['lon'], 37.563953,127.007410)    
 st.write(dis)
 
-
-count = 0
-for i in df[:10]:
- if distance(result.get("GET_LOCATION")['lat'], result.get("GET_LOCATION")['lon'], df["위도"].iloc[i], df["경도"].iloc[i])<400000:
-     count = count + 1
-
-print(count) 
